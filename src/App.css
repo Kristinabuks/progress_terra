@@ -1,0 +1,25 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  pointer-events: none;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 40px 20px 60px;
+}
+
+.App-body {
+  display: block;
+  height: 148px;
+  width: 100vw;
+  background: linear-gradient(180deg, #d2333e 0%, #f54b55 100%);
+}
