@@ -23,3 +23,8 @@
   width: 100vw;
   background: linear-gradient(180deg, #d2333e 0%, #f54b55 100%);
 }
+
+.App-button {
+  background: none;
+  border: none;
+}

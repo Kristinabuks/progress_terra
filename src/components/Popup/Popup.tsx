@@ -23,7 +23,9 @@ export const Popup: React.FC<PopupProps> = ({ bonusInfo }) => {
           </div>
         </div>
         <div className="Popup-right">
-          <img src={button} alt="button" />
+          <button onClick={()=>{console.log('next')}} className="Popup-button">
+            <img src={button} alt="button" />
+          </button>
         </div>
       </div>
     </div>

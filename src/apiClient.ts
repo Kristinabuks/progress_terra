@@ -26,7 +26,7 @@ const accessClient = axios.create({
 });
 
 export async function fetchAccessToken(): Promise<string> {
-  const accessToken = localStorage.getItem("accessToken");
+  const accessToken = sessionStorage.getItem("accessToken");
   if (accessToken) {
     return accessToken;
   }
@@ -54,7 +54,7 @@ export async function fetchAccessToken(): Promise<string> {
   }
 
   const freshAccessToken = response.data.accessToken;
-  localStorage.setItem("accessToken", freshAccessToken);
+  sessionStorage.setItem("accessToken", freshAccessToken);
 
   return freshAccessToken;
 }

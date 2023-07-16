@@ -11,6 +11,7 @@ import {
 function App() {
   const [accessToken, setAccessToken] = useState<string>();
   const [bonusInfo, setBonusInfo] = useState<BonusGeneralInfo>();
+  const [bonusVisible, setBonusVisible] = useState<boolean>(true);
 
   useEffect(() => {
     (async () => {
@@ -40,10 +41,12 @@ function App() {
     <div className="App">
       <header className="App-header">
         ЛОГОТИП
-        <img src={logo} className="App-logo" alt="logo" />
+        <button onClick={()=>{setBonusVisible(prevState => !prevState)}} className="App-button">
+          <img src={logo} className="App-logo" alt="logo" />
+        </button>
       </header>
       <div className="App-body"></div>
-      <div>{bonusInfo && <Popup bonusInfo={bonusInfo}></Popup>}</div>
+      <div>{bonusInfo && bonusVisible && <Popup bonusInfo={bonusInfo}></Popup>}</div>
     </div>
   );
 }
